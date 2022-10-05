@@ -11,5 +11,5 @@ For simplicity, the custom UI is CLI-based, and it has only one class `View`, wh
 Every subclass of `View` should implement its single abstract method `show()` that describes how the UI element will be displayed in the terminal.
 
 ### Examples
-
+**More practical examples on how you would use GSO with a custom UI are yet to be added soon.**
 1. [Color switcher](./example_1)
