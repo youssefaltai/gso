@@ -4,7 +4,7 @@ from ui.MainView import MainView
 
 
 def main():
-    main_ui = MainView("Parity Colors")
+    main_ui = MainView()
 
     def process(command):
         match command:

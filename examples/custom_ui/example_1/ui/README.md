@@ -8,10 +8,6 @@ The applications main UI component, it is the outermost container.
 
 **Fields:**
 
-#### `self.title_text_view: TextView`
-
-Decorative text.
-
 #### `self.container_view: ContainerView`
 
 Container for the `ColoredView`s and the `ButtonView`
