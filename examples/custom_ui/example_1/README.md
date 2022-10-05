@@ -31,9 +31,10 @@ Contains:
 ### `def process(command: str) -> None`
 Helper function for processing user input.
 
-#### `command: str`
-User command that they input via the command line.
+Parameters:
 
+#### `command: str` 
+User command that they input via the command line.
 Possible values:
 * click
 * exit
