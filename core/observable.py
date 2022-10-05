@@ -6,8 +6,8 @@ from core.observer import Observer
 
 
 class Observable(metaclass=abc.ABCMeta):
-    def __init__(self, initial_value: Any):
-        self._value: Any = initial_value
+    def __init__(self, initial_value) -> None:
+        self._value = initial_value
         self.__observers: list[Observer] = []
 
     def value(self) -> Any:

@@ -1,4 +1,4 @@
-## [`state.py`](./state.py)
+## [`state.py`](state.py)
 Contains the central [`State`](#class-state) class.
 
 ### `class State`
@@ -12,7 +12,7 @@ The only observable piece of data in this example.
 #### `def dispatch(action: Action) -> None`
 Updates the application state based on the `action`.
 
-## [`number.py`](./number.py)
+## [`number.py`](number.py)
 Contains the [`Number`](#class-numberobservable) observable class.
 
 ### `class Number(Observable)`

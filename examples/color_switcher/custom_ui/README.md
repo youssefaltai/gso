@@ -17,13 +17,13 @@ The `ButtonView` in the middle is used to increment the `Number` in the applicat
 
 # Details
 
-## [`ui/`](./ui)
+## [`ui/`](ui)
 Module that has all UI elements used in the example.
 
-## [`state/`](./state)
+## [`state/`](../state)
 Module that has the central `State` class and all the application-specific observable types.
 
-## [`main.py`](./main.py)
+## [`main.py`](main.py)
 The example's entry point. Run this file to test the example.
 
 **Contains:**

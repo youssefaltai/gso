@@ -1,4 +1,4 @@
-## [`MainView.py`](./MainView.py)
+## [`MainView.py`](MainView.py)
 
 Contains the [`MainView`](#class-mainviewview) class.
 
@@ -12,7 +12,7 @@ The applications main UI component, it is the outermost container.
 
 Container for the `ColoredView`s and the `ButtonView`
 
-## [`ContainerView.py`](./ContainerView.py)
+## [`ContainerView.py`](ContainerView.py)
 
 Contains the [`ContainerView`](#class-containerviewview) class.
 
@@ -37,7 +37,7 @@ A view that changes its color based on the application states `Number`.
 Turns blue when the `Number` is even, red otherwise.
 
 
-## [`ColoredView.py`](./ColoredView.py)
+## [`ColoredView.py`](ColoredView.py)
 
 Contains the [`ColoredView`](#class-coloredviewview) class.
 
@@ -57,7 +57,7 @@ Determines when the view should change its color to red with respect to the `Num
 #### `self.color: str`
 The views color.
 
-## [`TextView.py`](./TextView.py)
+## [`TextView.py`](TextView.py)
 Contains the [`TextView`](#class-coloredviewview) class.
 
 ### `class TextView(View)`
@@ -73,7 +73,7 @@ The text displayed.
 #### `def update_text(self, new_text: str) -> None`
 Updates the displayed text.
 
-## [`ButtonView.py`](./ButtonView.py)
+## [`ButtonView.py`](ButtonView.py)
 Contains the [`ButtonView`](#class-buttonviewview) class.
 
 ### `class ButtonView(View, Observer)`
