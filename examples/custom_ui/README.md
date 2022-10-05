@@ -4,7 +4,7 @@ The examples here demonstrate how you would use GSO with a completely custom UI 
 
 ## Custom UI
 
-You will find a folder named `ui` that contains a folder named `base`. The `base` folder contains the abstract UI classes and interfaces.
+You will find a folder named `ui` that contains a folder named `base`. The `base` folder contains the abstract UI classes and interfaces that the examples use.
 
 For simplicity, Custom UI is CLI-based, and it has only one class: `View`, which is an abstract class that every visible UI element should implement.
 
