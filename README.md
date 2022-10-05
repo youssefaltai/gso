@@ -42,4 +42,6 @@ interface: `notify(action)`, to notify all the attached observers with the updat
 
 ## Examples
 
+**More practical examples are yet to be added soon.**
+
 * [Custom UI](./examples/custom_ui)
