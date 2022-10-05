@@ -1,5 +1,5 @@
-from action import Action
-from number import Number
+from core.action import Action
+from state.number import Number
 
 
 class State:

@@ -1,5 +1,5 @@
-from action import Action
-from observable import Observable
+from core.action import Action
+from core.observable import Observable
 
 
 class Number(Observable):
