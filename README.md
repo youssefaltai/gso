@@ -11,6 +11,9 @@ GSO was originally designed to be used with GUIs built using [PySide](https://en
 ****
 
 ## Installation
+
+Make sure you have `pip` installed, then run the following:
+
 ```
 pip install gso
 ```
