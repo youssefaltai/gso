@@ -64,5 +64,5 @@ Container for the `ColoredView`s and the `ButtonView`
 
 **Methods:**
 #### `def show(self)`
-Describes how the view should br displayed in the terminal.
+Describes how the view should be displayed in the terminal.
 
