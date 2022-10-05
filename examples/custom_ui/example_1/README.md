@@ -48,3 +48,9 @@ Goes as follows:
 2. process them,
 3. update state and UI,
 4. rerender the UI.
+
+## `ui/`
+Module that has all UI elements used in the example.
+
+## `state/`
+Module that has the central `State` class and all the application-specific observable types.
