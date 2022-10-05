@@ -21,7 +21,7 @@ The `ButtonView` in the middle is used to increment the `Number` in the applicat
 The example's entry point. Run this file to test the example.
 
 **Contains:**
-* [`main()`](#def-main---none)
+* [`main`](#def-main---none)
 
 ### `def main() -> None`
 Called when the application is executed.
