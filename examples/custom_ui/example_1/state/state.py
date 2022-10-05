@@ -1,5 +1,5 @@
 from core.action import Action
-from examples.custom_ui.state.number import Number
+from examples.custom_ui.example_1.state.number import Number
 
 
 class State:

@@ -1,6 +1,6 @@
 from core.observer import Observer
-from examples.custom_ui.state.state import State
-from examples.custom_ui.ui.base.View import View
+from examples.custom_ui.example_1.state.state import State
+from examples.custom_ui.example_1.ui.base.View import View
 
 
 class ColoredView(View, Observer):
