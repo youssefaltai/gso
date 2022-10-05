@@ -8,7 +8,7 @@ from examples.custom_ui.ui.base.View import View
 class ContainerView(View):
     def __init__(self):
         self.left_view = ColoredView("red", "even")
-        self.number_button_view = ButtonView(f"{State.data['number'].value()}")
+        self.number_button_view = ButtonView(f"{State.number.value()}")
         self.right_view = ColoredView("blue", "odd")
 
         self.number_button_view.add_on_click_listener(
@@ -16,7 +16,7 @@ class ContainerView(View):
             State.dispatch(
                 Action(
                     "updateNumber",
-                    {"number": State.data["number"].value() + 1}
+                    {"number": State.number.value() + 1}
                 )
             )
         )

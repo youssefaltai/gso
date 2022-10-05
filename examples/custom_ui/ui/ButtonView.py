@@ -6,7 +6,7 @@ from examples.custom_ui.ui.base.View import View
 
 class ButtonView(View, Observer):
     def __init__(self, text):
-        State.data["number"].attach_observer(self)
+        State.number.attach_observer(self)
         self.text = TextView(text)
         self.on_click_handlers = []
 

@@ -5,7 +5,7 @@ from examples.custom_ui.ui.base.View import View
 
 class ColoredView(View, Observer):
     def __init__(self, color, parity):
-        State.data["number"].attach_observer(self)
+        State.number.attach_observer(self)
 
         self.parity = parity
         self.color = color
