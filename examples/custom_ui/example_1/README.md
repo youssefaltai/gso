@@ -15,6 +15,8 @@ The right `ColoredView` will do the exact opposite.
 
 The `ButtonView` in the middle is used to increment the `Number` in the application state. The text displayed on the button should update to show the current value of the `Number`.
 
+# Details
+
 ## `main.py`
 The example's entry point. Run this file to test the example.
 
