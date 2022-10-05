@@ -6,9 +6,7 @@ implement to facilitate syncing them.
 GSO is based on the [Observer pattern](https://refactoring.guru/design-patterns/observer), it is inspired
 by [Redux.js](https://redux.js.org/).
 
-GSO was originally designed to facilitate the synchronization between application state and GUIs built
-with [PySide](https://en.wikipedia.org/wiki/PySide)/[PyQt](https://en.wikipedia.org/wiki/PyQt), but it should work with
-any GUI library since it is very abstract.
+GSO was originally designed to used with GUIs built using [PySide](https://en.wikipedia.org/wiki/PySide)/[PyQt](https://en.wikipedia.org/wiki/PyQt), but it should work with any GUI library since it is very abstract.
 
 ⚠ **Please note that GSO is currently under development and is far from usable.**
 
