@@ -18,24 +18,25 @@ The `ButtonView` in the middle is used to increment the `Number` in the applicat
 ## `main.py`
 The example's entry point. Run this file to test the example.
 
-Contains:
+**Contains:**
 * [`main()`](#def-main---none)
 
 ### `def main() -> None`
 Called when the application is executed.
 
-Contains:
+**Contains:**
 * [`process()`](#def-processcommand-str---none)
 * [Main loop](#main-loop)
 
 ### `def process(command: str) -> None`
 Helper function for processing user input.
 
-Parameters:
+**Parameters:**
 
 #### `command: str` 
 User command that they input via the command line.
-Possible values:
+
+**Possible values:**
 * click
 * exit
 
@@ -45,3 +46,21 @@ Goes as follows:
 2. process them,
 3. update state and UI,
 4. rerender the UI.
+
+## `ui/MainView.py`
+Contains the [`MainView`](#class-mainviewview) class.
+
+### `class MainView(View)`
+The applications main UI component, it is the outermost container.
+
+**Fields:**
+#### `self.title_text_view: TextView`
+Decorative text.
+
+#### `self.container_view: ContainerView`
+Container for the `ColoredView`s and the `ButtonView`
+
+**Methods:**
+#### `def show(self)`
+Describes how the view should br displayed in the terminal.
+
