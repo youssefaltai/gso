@@ -9,7 +9,7 @@ def main():
     def process(command):
         match command:
             case "click":
-                main_ui.container_view.number_button_view.click()
+                main_ui.container_view.button_view.click()
             case "exit":
                 sys.exit()
             case other:

@@ -20,7 +20,7 @@ class ButtonView(View, Observer):
     def notify(self, action):
         match action.name:
             case "updateNumber":
-                self.text.update_text(f'{action.payload["number"]}')
+                self.text.update_text(f'{State.number.value()}')
 
     def show(self):
         return f"[{self.text}]"

@@ -7,11 +7,10 @@ from examples.color_switcher.custom_ui.customui.base.View import View
 
 class ContainerView(View):
     def __init__(self):
-        self.left_view = ColoredView("red", "even")
-        self.number_button_view = ButtonView(f"{State.number.value()}")
-        self.right_view = ColoredView("blue", "odd")
+        self.colored_view = ColoredView("even")
+        self.button_view = ButtonView(f"{State.number.value()}")
 
-        self.number_button_view.add_on_click_listener(
+        self.button_view.add_on_click_listener(
             lambda:
             State.dispatch(
                 Action(
@@ -22,7 +21,7 @@ class ContainerView(View):
         )
 
     def show(self):
-        return f"{self.left_view} {self.number_button_view} {self.right_view}"
+        return f"{self.button_view}\n{self.colored_view}"
 
     def __repr__(self):
         return self.show()

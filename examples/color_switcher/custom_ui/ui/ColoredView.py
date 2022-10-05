@@ -4,26 +4,28 @@ from examples.color_switcher.custom_ui.customui.base.View import View
 
 
 class ColoredView(View, Observer):
-    def __init__(self, color, parity):
+    def __init__(self, parity):
         State.number.attach_observer(self)
+        self.parity: str = parity
+        self.update_color(self.color())
 
-        self.parity = parity
-        self.color = color
-
-    def update_color(self, new_color):
-        self.color = new_color
+    def update_color(self, new_color: str) -> None:
+        self.displayed_color = new_color
 
     def notify(self, action):
         match action.name:
             case "updateNumber":
-                match self.parity:
-                    case "even":
-                        self.update_color("red" if action.payload["number"] % 2 == 0 else "blue")
-                    case "odd":
-                        self.update_color("blue" if action.payload["number"] % 2 == 0 else "red")
+                self.update_color(self.color())
+
+    def color(self):
+        match self.parity:
+            case "even":
+                return "red" if State.number.value() % 2 == 0 else "blue"
+            case "odd":
+                return "red" if State.number.value() % 2 != 0 else "blue"
 
     def show(self):
-        return f"{self.color}"
+        return f"{self.color()}"
 
     def __repr__(self):
         return self.show()
