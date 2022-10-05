@@ -1,8 +1,8 @@
 # Example 1 (Color switcher)
 
-In this example, the application state consists of only one observable type of data: `Number`
+In this example, the application state consists of only one observable type of data: `Number`,
 
-The UI consists of three parts:
+and the UI consists of three parts:
 * A `ColoredView` on the left.
 * A `ColoredView` on the right.
 * A `ButtonView` in the middle.
