@@ -14,7 +14,7 @@ class NumberButtonWidget(
         QPushButton.__init__(self, text=text)
         Observer.__init__(self)
         State.number.attach_observer(self)
-        self.setSizePolicy(QSizePolicy.Policy.Preferred, QSizePolicy.Policy.Expanding)
+        self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Preferred)
 
         self.clicked.connect(
             lambda:
