@@ -44,8 +44,8 @@ User command that they input via the command line.
 
 ### Main loop
 Goes as follows:
-1. Wait for user commands,
-2. process them,
+1. Wait for the users command,
+2. process it,
 3. update state and UI,
 4. rerender the UI.
 
