@@ -1,6 +1,6 @@
-from ui.ContainerView import ContainerView
-from ui.TextView import TextView
-from ui.base.View import View
+from examples.custom_ui.ui.ContainerView import ContainerView
+from examples.custom_ui.ui.TextView import TextView
+from examples.custom_ui.ui.base.View import View
 
 
 class MainView(View):
