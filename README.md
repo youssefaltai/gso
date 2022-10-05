@@ -31,3 +31,5 @@ its values.
 
 Every update method on an observable piece of data should use the protected member `_value` in updating, and the protected method of the `Observable`
 interface: `notify(action)`, to notify all the attached observers with the update.
+
+UI elements should observe the observable pieces of data they depend on, this should be done by calling the `attach_observer(observer)` method on `Observable`s and passing the UI elements as arguments.
