@@ -8,7 +8,7 @@ by [Redux.js](https://redux.js.org/).
 
 GSO was originally designed to be used with GUIs built using [PySide](https://en.wikipedia.org/wiki/PySide)/[PyQt](https://en.wikipedia.org/wiki/PyQt), but it should work with any class-based UI since it is very abstract.
 
-⚠ **Please note that GSO is currently under development and is far from usable.**
+🚧 **GSO v2.0 is currently under development.**
 
 ## How to use
 
