@@ -1,4 +1,4 @@
-## `MainView.py`
+## [`MainView.py`](./MainView.py)
 
 Contains the [`MainView`](#class-mainviewview) class.
 
@@ -12,7 +12,7 @@ The applications main UI component, it is the outermost container.
 
 Container for the `ColoredView`s and the `ButtonView`
 
-## `ContainerView.py`
+## [`ContainerView.py`](./ContainerView.py)
 
 Contains the [`ContainerView`](#class-containerviewview) class.
 
