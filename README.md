@@ -1,7 +1,7 @@
 # Global State Observer
 
-GSO is an open-source Python library for managing state. It provides simple interfaces that UI elements can easily
-implement to sync with application state.
+GSO is an open-source Python library for managing state. It provides simple interfaces that application data objects and UI elements can easily
+implement to facilitate syncing them.
 
 GSO is based on the [Observer pattern](https://refactoring.guru/design-patterns/observer), it is inspired
 by [Redux.js](https://redux.js.org/).
