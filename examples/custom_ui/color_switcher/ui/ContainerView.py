@@ -1,7 +1,7 @@
 from core.action import Action
-from examples.custom_ui.example_1.state.state import State
-from examples.custom_ui.example_1.ui.ButtonView import ButtonView
-from examples.custom_ui.example_1.ui.ColoredView import ColoredView
+from examples.custom_ui.color_switcher.state.state import State
+from examples.custom_ui.color_switcher.ui.ButtonView import ButtonView
+from examples.custom_ui.color_switcher.ui.ColoredView import ColoredView
 from examples.custom_ui.ui.base.View import View
 
 

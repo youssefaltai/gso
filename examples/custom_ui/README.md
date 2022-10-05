@@ -12,4 +12,4 @@ Every subclass of `View` should implement its single abstract method `show()` th
 
 ### Examples
 **More practical examples on how you would use GSO with a custom UI are yet to be added soon.**
-1. [Color switcher](./example_1)
+1. [Color switcher](./color_switcher)
