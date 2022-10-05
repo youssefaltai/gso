@@ -1,4 +1,4 @@
-from examples.custom_ui.example_1.ui.base.View import View
+from examples.custom_ui.ui.base.View import View
 
 
 class TextView(View):

@@ -1,6 +1,6 @@
 from examples.custom_ui.example_1.ui.ContainerView import ContainerView
 from examples.custom_ui.example_1.ui.TextView import TextView
-from examples.custom_ui.example_1.ui.base.View import View
+from examples.custom_ui.ui.base.View import View
 
 
 class MainView(View):
