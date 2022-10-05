@@ -20,32 +20,27 @@ pip install gso
 
 ## How to use
 
-* UI elements should implement the `Observer` interface, and override the `notify(action)` method, to update their UI state based on the `action`.
-
+* UI components should:
+  * Implement the `Observer` interface.
+  * Override the `notify(action)` method to update their UI state based on the `action`.
 
 * Application state should be encapsulated in a class called `State`. 
-It should hold all observable pieces of data and have a single
-method: `dispatch(action)`.
+It should hold all observable pieces of data and have a single public method: `dispatch(action)`.
 
-
-* The `dispatch(action)` method on the `State` class should be called from the UI elements as a result of a user interaction.
-
+* The `dispatch(action)` method on the `State` class should be called from the UI components as a result of a user interaction.
 
 * An `Action` is an object that describes a UI event that is fired with the intent of changing application state.
 
+* An `Observable` is any value (or collection of values) in the application state that UI components depend on.
 
-* An observable piece of data is any value (or collection of values) in the application state that UI elements depend on.
-
-
-* Any piece of observable data should be encapsulated in a class that implements the `Observable` interface, and have any number of methods for updating
-its values.
-
+* Any piece of observable data should be:
+  * Encapsulated in a class that implements the `Observable` interface.
+  * Have any number of methods for updating its values.
 
 * Every update method on an observable piece of data should use the protected member `_value` in updating, and the protected method of the `Observable`
 interface: `notify(action)`, to notify all the attached observers with the update.
 
-
-* UI elements should observe the observable pieces of data they depend on, this should be done by calling the `attach_observer(observer)` method on `Observable`s and passing the UI elements as arguments.
+* UI components should observe the observable pieces of data they depend on, this should be done by calling the `attach_observer(observer)` method on `Observable`s and passing the UI components as arguments.
 
 ## Class diagram
 
