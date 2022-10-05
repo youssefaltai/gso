@@ -41,3 +41,6 @@ interface: `notify(action)`, to notify all the attached observers with the updat
 
 * UI elements should observe the observable pieces of data they depend on, this should be done by calling the `attach_observer(observer)` method on `Observable`s and passing the UI elements as arguments.
 
+## Examples
+
+* [Custom UI](./examples/custom_ui)
