@@ -45,8 +45,8 @@ Helper function for processing user input.
 User command that they input via the command line.
 
 **Possible values:**
-* click
-* exit
+* "click"
+* "exit"
 
 ### Main loop
 Goes as follows:

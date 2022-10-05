@@ -35,3 +35,24 @@ A button used to increment the application states `Number`. It displays the `Num
 
 A view that changes its color based on the application states `Number`.
 Turns blue when the `Number` is even, red otherwise.
+
+
+## [`ColoredView.py`](./ColoredView.py)
+
+Contains the [`ColoredView`](#class-coloredviewview) class.
+
+### `class ColoredView(View)`
+
+A view that changes its color based on the application states `Number`.
+
+**Fields:**
+
+#### `self.parity: str`
+Determines when the view should change its color to red with respect to the `Number`s parity.
+
+**Possible values:**
+* "even"
+* "odd"
+
+#### `self.color: str`
+The views color.
