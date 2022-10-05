@@ -9,7 +9,8 @@ class State:
 
     @classmethod
     def dispatch(cls, action: Action):
-        if action.name == "updateNumber":
-            cls.data["number"].update_number(action.payload["number"])
-        else:
-            raise Exception("Unknown action")
+        match action.name:
+            case "updateNumber":
+                cls.data["number"].update_number(action.payload["number"])
+            case other:
+                raise Exception(f"Unknown action: {other}")

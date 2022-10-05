@@ -13,7 +13,7 @@ def main():
             case "exit":
                 sys.exit()
             case other:
-                raise Exception(f"Unknown such command: {other}")
+                raise Exception(f"Unknown command: {other}")
 
     while True:
         main_ui.show()
