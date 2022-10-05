@@ -4,7 +4,7 @@ GSO is an open-source Python library for managing state. It provides simple inte
 implement to facilitate syncing them together. It is based on the [Observer pattern](https://refactoring.guru/design-patterns/observer), and it is inspired
 by [Redux.js](https://redux.js.org/).
 
-GSO was originally designed to be used with GUIs built using [PySide](https://en.wikipedia.org/wiki/PySide)/[PyQt](https://en.wikipedia.org/wiki/PyQt), but it should work with any class-based UI since thanks to its abstractness.
+GSO was originally designed to be used with GUIs built using [PySide](https://en.wikipedia.org/wiki/PySide)/[PyQt](https://en.wikipedia.org/wiki/PyQt), but it should work with any class-based UI thanks to its abstractness.
 
 ****
 🚧 **GSO v2.0 is currently under development.**
