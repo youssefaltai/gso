@@ -14,22 +14,30 @@ any GUI library since it is very abstract.
 
 ## How to use
 
-UI elements should implement the `Observer` interface, and override the `notify(action)` method, to update their UI state based on the `action`.
+* UI elements should implement the `Observer` interface, and override the `notify(action)` method, to update their UI state based on the `action`.
 
-Application state should be encapsulated in a class called `State`. 
+
+* Application state should be encapsulated in a class called `State`. 
 It should hold all observable pieces of data and have a single
 method: `dispatch(action)`.
 
-The `dispatch(action)` method on the `State` class should be called from the UI elements as a result of a user interaction.
 
-An `Action` is an object that describes a UI event that is fired with the intent of changing application state.
+* The `dispatch(action)` method on the `State` class should be called from the UI elements as a result of a user interaction.
 
-An observable piece of data is any value (or collection of values) in the application state that UI elements depend on.
 
-Any piece of observable data should be encapsulated in a class that implements the `Observable` interface, and have any number of methods for updating
+* An `Action` is an object that describes a UI event that is fired with the intent of changing application state.
+
+
+* An observable piece of data is any value (or collection of values) in the application state that UI elements depend on.
+
+
+* Any piece of observable data should be encapsulated in a class that implements the `Observable` interface, and have any number of methods for updating
 its values.
 
-Every update method on an observable piece of data should use the protected member `_value` in updating, and the protected method of the `Observable`
+
+* Every update method on an observable piece of data should use the protected member `_value` in updating, and the protected method of the `Observable`
 interface: `notify(action)`, to notify all the attached observers with the update.
 
-UI elements should observe the observable pieces of data they depend on, this should be done by calling the `attach_observer(observer)` method on `Observable`s and passing the UI elements as arguments.
+
+* UI elements should observe the observable pieces of data they depend on, this should be done by calling the `attach_observer(observer)` method on `Observable`s and passing the UI elements as arguments.
+
