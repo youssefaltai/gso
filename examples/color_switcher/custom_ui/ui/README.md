@@ -1,3 +1,7 @@
+****
+⚠️ **This documentation is outdated.**
+****
+
 ## [`MainView.py`](MainView.py)
 
 Contains the [`MainView`](#class-mainviewview) class.
