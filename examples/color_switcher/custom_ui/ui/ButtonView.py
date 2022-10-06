@@ -17,7 +17,7 @@ class ButtonView(View, Observer):
         for handler in self.on_click_handlers:
             handler()
 
-    def notify(self, action):
+    def notify_state_changed(self, action):
         match action.name:
             case "updateNumber":
                 self.text.update_text(f'{State.number.value()}')

@@ -27,7 +27,7 @@ class ColoredWidget(
     def update_color(self, new_color: str) -> None:
         self.setStyleSheet(f"background-color: {new_color}")
 
-    def notify(self, action: Action):
+    def notify_state_changed(self, action: Action):
         match action.name:
             case "updateNumber":
                 self.update_color(self.color())

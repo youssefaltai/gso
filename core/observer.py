@@ -5,5 +5,5 @@ from core.action import Action
 
 class Observer(metaclass=abc.ABCMeta):
     @abc.abstractmethod
-    def notify(self, action: Action):
+    def notify_state_changed(self, action: Action):
         pass

@@ -12,7 +12,7 @@ class ColoredView(View, Observer):
     def update_color(self, new_color: str) -> None:
         self.displayed_color = new_color
 
-    def notify(self, action):
+    def notify_state_changed(self, action):
         match action.name:
             case "updateNumber":
                 self.update_color(self.color())

@@ -27,7 +27,7 @@ class NumberButtonWidget(
             )
         )
 
-    def notify(self, action: Action):
+    def notify_state_changed(self, action: Action):
         match action.name:
             case "updateNumber":
                 self.setText(f"{State.number.value()}")

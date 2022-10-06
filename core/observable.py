@@ -18,4 +18,4 @@ class Observable(metaclass=abc.ABCMeta):
 
     def _notify(self, action: Action) -> None:
         for observer in self.__observers:
-            observer.notify(action)
+            observer.notify_state_changed(action)
