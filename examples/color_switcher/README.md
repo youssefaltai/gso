@@ -16,3 +16,4 @@ should update to show the current value of the `Number`.
 
 * [Custom UI](./custom_ui)
 * [PySide6](./pyside6)
+* [PyGObject](./gtk)
