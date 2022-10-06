@@ -1,5 +1,5 @@
 ## [`ui/`](ui)
-Module that has all UI elements used in the example.
+Module that has all UI components used in the example.
 
 ## [`main.py`](main.py)
 The example's entry point. Run this file to test the example.
