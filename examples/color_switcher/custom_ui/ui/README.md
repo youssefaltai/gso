@@ -10,7 +10,7 @@ The applications main UI component, it is the outermost container.
 
 #### `self.container_view: ContainerView`
 
-Container for the `ColoredView`s and the `ButtonView`
+Container for the `ColoredView` and the `ButtonView`
 
 ## [`ContainerView.py`](ContainerView.py)
 
@@ -18,11 +18,11 @@ Contains the [`ContainerView`](#class-containerviewview) class.
 
 ### `class ContainerView(View)`
 
-Container for the left and right `ColoredView`s and the number `ButtonView`.
+Container for the `ColoredView` and the number `ButtonView`.
 
 **Fields:**
 
-#### `self.left_view: ColoredView`
+#### `self.colored: ColoredView`
 
 A view that changes its color based on the application states `Number`.
 Turns red when the `Number` is even, blue otherwise.
@@ -30,12 +30,6 @@ Turns red when the `Number` is even, blue otherwise.
 #### `self.number_button_view: ButtonView`
 
 A button used to increment the application states `Number`. It displays the `Number`s current value as the buttons text.
-
-#### `self.right_view: ColoredView`
-
-A view that changes its color based on the application states `Number`.
-Turns blue when the `Number` is even, red otherwise.
-
 
 ## [`ColoredView.py`](ColoredView.py)
 
