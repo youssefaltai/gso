@@ -27,7 +27,7 @@ helps make application state and UI state synced together.
 All an observable brings to the table is that it keeps references to objects that are
 interested in knowing when the wrapped state changes.
 
-Observables provide one way to update encapsulated state, and
+Observables provide *one and only one* way to update encapsulated state, and
 in this way, observers are notified after the update happens so
 that they can update their own state accordingly.
 
