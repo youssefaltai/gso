@@ -9,6 +9,7 @@ from examples.counter.state.counterstate import CounterState
 
 def main():
     GlobalState.create(counter=CounterState())
+
     app = QApplication([])
     main_window = MainWindow()
     sys.exit(app.exec())
