@@ -13,6 +13,7 @@ You will find a lot of [examples](https://github.com/youssef-attai/gso/tree/main
 that can help you get started.
 The examples are very simple, they are all focused on 
 the pattern that works best with GSO.
+
 You are encouraged to clone the ones that use the UI library you are working with
 and have a closer look.
 
@@ -23,7 +24,7 @@ user-defined observables. An observable is like
 a wrapper around the actual state or variable, that
 helps make application state and UI state synced together.
 
-All an observable does is keep references to objects that are
+All an observable brings to the table is that it keeps references to objects that are
 interested in knowing when the wrapped state changes.
 
 Observables provide one way to update encapsulated state, and
@@ -32,7 +33,7 @@ that they can update their own state accordingly.
 
 All UI components that depend on at least one variable in
 application state should implement the `Observer` interface.
-Each of these variables of interest should be encapsulated in
+Each of these variables should be encapsulated in
 a class that extends the `Observable` class. 
 
 Now UI components are able to observe the observables they
@@ -90,10 +91,3 @@ to make the corresponding update properly.
 If you are familiar with class diagrams, this might be useful: 
 
 ![GSO Class Diagram](./gso-class-diagram.svg)
-
-## How to install
-
-Make sure you have `pip` installed, then open a terminal window, and type:
-```
-pip install gso
-```
