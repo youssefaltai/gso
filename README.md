@@ -1,56 +1,71 @@
-# Global State Observer
+# GSO (Global State Observer)
 
-****
-⚠️ **This documentation is outdated.**
-****
+GSO is an open-source Python library for managing application state.
+It uses a modified version of the [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) 
+to sync UI state with application state.
 
-GSO is an open-source Python library for managing and centralizing state. It is based on the [Observer pattern](https://refactoring.guru/design-patterns/observer) and inspired
-by [Redux.js](https://redux.js.org/).
-
-GSO was originally designed to be used with GUIs built using [PySide](https://en.wikipedia.org/wiki/PySide)/[PyQt](https://en.wikipedia.org/wiki/PyQt), but it should work with any class-based UI thanks to its abstractness.
-
-****
-🚧 **GSO is currently under development.**
-****
-
-## Installation
-
-Make sure you have `pip` installed, then run the following:
-
-```
-pip install gso
-```
+GSO was originally designed to work with [PySide](https://wiki.qt.io/Qt_for_Python)/[PyQt](https://riverbankcomputing.com/software/pyqt/),
+but it works well with pretty much every class-based UI library out there.
 
 ## How to use
 
-* UI components should:
-  * Implement the `Observer` interface.
-  * Override the `notify(action)` method to update their UI state based on the `action`.
+You will find a lot of [examples](https://github.com/youssef-attai/gso/tree/main/examples)
+that can help you get started.
+The examples are very simple, they are all focused on 
+the pattern that works best with GSO.
+You are encouraged to clone the ones that use the UI library you are working with
+and have a closer look.
 
-* Application state should be encapsulated in a class called `State`. 
-It should hold all observable pieces of data and have a single public method: `dispatch(action)`.
+### Flow
 
-* The `dispatch(action)` method on the `State` class should be called from the UI components as a result of a user interaction.
+In GSO, application state is encapsulated in 
+user-defined observables. An observable is like
+a wrapper around the actual state or variable, that
+helps make application state and UI state synced together.
 
-* An `Action` is an object that describes a UI event that is fired with the intent of changing application state.
+All an observable does is keep references to objects that are
+interested in knowing when the wrapped state changes.
 
-* An `Observable` is any value (or collection of values) in the application state that UI components depend on.
+Observables provide one way to update encapsulated state, and
+in this way, observers are notified after the update happens so
+that they can update their own state accordingly.
 
-* Any piece of observable data should be:
-  * Encapsulated in a class that implements the `Observable` interface.
-  * Have any number of methods for updating its values.
+All UI components that depend on at least one variable in
+application state should implement the `Observer` interface.
+Each of these variables of interest should be encapsulated in
+a class that extends the `Observable` class. 
 
-* Every update method on an observable piece of data should use the protected member `_value` in updating, and the protected method of the `Observable`
-interface: `notify(action)`, to notify all the attached observers with the update.
+Now UI components are able to observe the observables they
+depend on, using the `observe()` method on `Observer`
+instances (or `attach_observer()` on `Observable` instances),
+and implement the `notify_state_changed()` method to react
+accordingly when an observable state changes.
 
-* UI components should observe the observable pieces of data they depend on, this should be done by calling the `attach_observer(observer)` method on `Observable`s and passing the UI components as arguments.
+That was the O in GSO, the Observer pattern.
 
-## Class diagram
+You might be thinking, how do UI components reach
+the observables? Well, that's where the GS comes to play.
 
-![Class diagram](./gso-class-diagram.svg)
+First, all related observables should be encapsulated together
+in a class that implement the `State` interface.
 
-## Examples
+`State` classes should implement the `dispatch()`
+method, which is what UI components are going to use
+to request an update in state (usually due to
+some kind of UI event). The `dispatch()` method
+should handle changing the observables' states based on the
+dispatched `Action` (more on `Action`s later).
 
-**More practical examples are yet to be added soon.**
+Then, the `GlobalState` class is used to group all `State` classes 
+and make them globally available everywhere in your code, 
+so that UI components can easily dispatch actions and request 
+state updates. 
 
-* [Color switcher](./examples/counter)
+Grouping `State` classes is done using the
+`GlobalState`'s public class method `create()`, which can only
+be called once at the very beginning of your application, to
+initialize and prepare application state.
+
+If you are familiar with class diagrams, this might be useful: 
+
+![GSO Class Diagram](./gso-class-diagram.svg)
