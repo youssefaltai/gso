@@ -1,7 +1,5 @@
 import abc
 
-from core.action import Action
-
 
 class State(metaclass=abc.ABCMeta):
     @abc.abstractmethod
@@ -9,5 +7,5 @@ class State(metaclass=abc.ABCMeta):
         pass
 
     @abc.abstractmethod
-    def dispatch(self, action: Action) -> None:
+    def dispatch(self, action) -> None:
         pass

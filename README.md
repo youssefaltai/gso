@@ -1,5 +1,9 @@
 # Global State Observer
 
+****
+⚠️ **This documentation is outdated.**
+****
+
 GSO is an open-source Python library for managing and centralizing state. It is based on the [Observer pattern](https://refactoring.guru/design-patterns/observer) and inspired
 by [Redux.js](https://redux.js.org/).
 
@@ -43,7 +47,7 @@ interface: `notify(action)`, to notify all the attached observers with the updat
 
 ## Class diagram
 
-![Class diagram](./GSO.svg)
+![Class diagram](./gso-class-diagram.svg)
 
 ## Examples
 
