@@ -12,7 +12,7 @@ but it works well with pretty much every class-based UI library out there.
 You will find a lot of [examples](https://github.com/youssef-attai/gso/tree/main/examples)
 that can help you get started.
 The examples are very simple, they are all focused on 
-the pattern you should follow when you use GSO.
+the pattern that works best with GSO.
 You are encouraged to clone the ones that use the UI library you are working with
 and have a closer look.
 
@@ -28,18 +28,43 @@ interested in knowing when the wrapped state changes.
 
 Observables provide one way to update encapsulated state, and
 in this way, observers are notified after the update happens so
-that they can update accordingly.
+that they can update their own state accordingly.
 
 All UI components that depend on at least one variable in
 application state should implement the `Observer` interface.
-This variable of interest should be encapsulated in a class that
-extends the `Observable` class. 
+Each of these variables of interest should be encapsulated in
+a class that extends the `Observable` class. 
 
-Then, The UI component should observe the observable it
-depends on, using the `observe()` method on `Observer`
+Now UI components are able to observe the observables they
+depend on, using the `observe()` method on `Observer`
 instances (or `attach_observer()` on `Observable` instances),
 and implement the `notify_state_changed()` method to react
-accordingly when the observable state changes.
+accordingly when an observable state changes.
+
+That was the O in GSO, the Observer pattern.
+
+You might be thinking, how do UI components reach
+the observables? Well, that's where the GS comes to play.
+
+First, all related observables should be encapsulated together
+in a class that implement the `State` interface.
+
+`State` classes should implement the `dispatch()`
+method, which is what UI components are going to use
+to request an update in state (usually due to
+some kind of UI event). The `dispatch()` method
+should handle changing the observables' states based on the
+dispatched `Action` (more on `Action`s later).
+
+Then, the `GlobalState` class is used to group all `State` classes 
+and make them globally available everywhere in your code, 
+so that UI components can easily dispatch actions and request 
+state updates. 
+
+Grouping `State` classes is done using the
+`GlobalState`'s public class method `create()`, which can only
+be called once at the very beginning of your application, to
+initialize and prepare application state.
 
 If you are familiar with class diagrams, this might be useful: 
 
