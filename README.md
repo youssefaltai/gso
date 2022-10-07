@@ -13,6 +13,7 @@ You will find a lot of [examples](https://github.com/youssef-attai/gso/tree/main
 that can help you get started.
 The examples are very simple, they are all focused on 
 the pattern that works best with GSO.
+
 You are encouraged to clone the ones that use the UI library you are working with
 and have a closer look.
 
