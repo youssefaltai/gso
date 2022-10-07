@@ -33,7 +33,7 @@ that they can update their own state accordingly.
 
 All UI components that depend on at least one variable in
 application state should implement the `Observer` interface.
-Each of these variables of interest should be encapsulated in
+Each of these variables should be encapsulated in
 a class that extends the `Observable` class. 
 
 Now UI components are able to observe the observables they
