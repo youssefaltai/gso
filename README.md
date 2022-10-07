@@ -91,3 +91,10 @@ to make the corresponding update properly.
 If you are familiar with class diagrams, this might be useful: 
 
 ![GSO Class Diagram](./gso-class-diagram.svg)
+
+## How to install
+
+Make sure you have `pip` installed, then open a terminal window, and type:
+```
+pip install gso
+```
