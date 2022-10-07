@@ -67,6 +67,27 @@ Grouping `State` classes is done using the
 be called once at the very beginning of your application, to
 initialize and prepare application state.
 
+That was the GS in GSO, the `GlobalState` class.
+
+As you already know, an observable can have multiple observers.
+Also, an observer can observe multiple observables.
+
+In other words, one variable in application state
+can have multiple UI components depending on it,
+and one UI component can have it's state depend on multiple
+variables in application state, which is why
+the `notify_state_changed()` method on `Observer`s
+accepts the parameter `action`.
+
+If you are familiar with [Redux](https://redux.js.org/), you already
+know what actions are, they are exactly the same in GSO.
+
+Anyway, actions are objects that describe what kind of update 
+should take place in both UI components and application state.
+Every action should have a unique name, and a payload that
+has all what the object being notified with the action needs
+to make the corresponding update properly.
+
 If you are familiar with class diagrams, this might be useful: 
 
 ![GSO Class Diagram](./gso-class-diagram.svg)
