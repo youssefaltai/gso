@@ -1,9 +1,10 @@
 import abc
 
-from core.action import Action
-
 
 class Observer(metaclass=abc.ABCMeta):
+    def observe(self, observable):
+        observable.attach_observer(self)
+
     @abc.abstractmethod
-    def notify_state_changed(self, action: Action):
+    def notify_state_changed(self, action):
         pass

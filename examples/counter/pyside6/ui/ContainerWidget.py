@@ -1,8 +1,8 @@
 from PySide6.QtWidgets import QWidget, QVBoxLayout
 
-from examples.color_switcher.pyside6.ui.ColoredWidget import ColoredWidget
-from examples.color_switcher.pyside6.ui.NumberButtonWidget import NumberButtonWidget
-from examples.color_switcher.state.state import State
+from core.globalstate import GlobalState
+from examples.counter.pyside6.ui.ColoredWidget import ColoredWidget
+from examples.counter.pyside6.ui.NumberButtonWidget import NumberButtonWidget
 
 
 class ContainerWidget(QWidget):
@@ -10,7 +10,7 @@ class ContainerWidget(QWidget):
         super(ContainerWidget, self).__init__()
         self.setLayout(QVBoxLayout(self))
 
-        self.number_button_widget: NumberButtonWidget = NumberButtonWidget(f"{State.number.value()}")
+        self.number_button_widget: NumberButtonWidget = NumberButtonWidget(f"{GlobalState.colorswitcher.number.value()}")
         self.colored_widget: ColoredWidget = ColoredWidget("even")
 
         self.layout().addWidget(self.number_button_widget)

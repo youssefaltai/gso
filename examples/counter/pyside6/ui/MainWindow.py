@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QMainWindow
 
-from examples.color_switcher.pyside6.ui.ContainerWidget import ContainerWidget
+from examples.counter.pyside6.ui.ContainerWidget import ContainerWidget
 
 
 class MainWindow(QMainWindow):

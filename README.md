@@ -50,4 +50,4 @@ interface: `notify(action)`, to notify all the attached observers with the updat
 
 **More practical examples are yet to be added soon.**
 
-* [Color switcher](./examples/color_switcher)
+* [Color switcher](./examples/counter)

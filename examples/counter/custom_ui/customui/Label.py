@@ -1,7 +1,7 @@
-from examples.color_switcher.custom_ui.customui.base.View import View
+from examples.counter.custom_ui.customui.base.View import View
 
 
-class TextView(View):
+class Label(View):
     def __init__(self, text):
         self.text = text
 

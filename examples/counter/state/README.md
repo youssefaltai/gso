@@ -1,4 +1,4 @@
-## [`state.py`](state.py)
+## [`state.py`](counterstate.py)
 Contains the central [`State`](#class-state) class.
 
 ### `class State`
