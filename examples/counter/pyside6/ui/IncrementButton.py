@@ -12,12 +12,5 @@ class IncrementButton(QPushButton):
         self.setIcon(QIcon("./../icons/list-add-symbolic.svg"))
         self.clicked.connect(
             lambda:
-            GlobalState.counter.dispatch(
-                Action(
-                    'incrementNumber',
-                    {
-                        'amount': 1
-                    }
-                )
-            )
+            GlobalState.counter.incrementNumber(1)
         )

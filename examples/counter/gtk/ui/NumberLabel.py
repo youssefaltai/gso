@@ -1,6 +1,7 @@
 import gi
 
 from core.globalstate import GlobalState
+from examples.counter.action.update_number import UpdateNumber
 
 gi.require_version('Gtk', '3.0')
 
@@ -20,6 +21,5 @@ class NumberLabel(
         self.set_label(f"{GlobalState.counter.number.value}")
 
     def notify_state_changed(self, action):
-        match action.name:
-            case "numberChanged":
-                self.set_label(f"{GlobalState.counter.number.value}")
+        if isinstance(action, UpdateNumber):
+            self.set_label(f"{GlobalState.counter.number.value}")

@@ -2,8 +2,17 @@ import abc
 
 
 class Observable(metaclass=abc.ABCMeta):
-    def __init__(self):
+    def __init__(self, initial_value):
+        self.__value = initial_value
         self.__observers = []
+
+    @property
+    def value(self):
+        return self.__value
+
+    def apply(self, action):
+        self.__value = action(self.__value)
+        self.__notify(action)
 
     def attach_observer(self, observer):
         self.__observers.append(observer)

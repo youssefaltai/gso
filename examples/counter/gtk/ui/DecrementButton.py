@@ -6,8 +6,6 @@ gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk
 
-from core.action import Action
-
 
 class DecrementButton(
     Gtk.Button
@@ -19,12 +17,5 @@ class DecrementButton(
         self.connect(
             'clicked',
             lambda btn:
-            GlobalState.counter.dispatch(
-                Action(
-                    'decrementNumber',
-                    {
-                        "amount": 1
-                    }
-                )
-            )
+            GlobalState.counter.decrementNumber(1)
         )

@@ -1,17 +1,18 @@
-from core.action import Action
-from core.state import State
-from examples.counter.state.number import Number
+from core.observable import Observable
+from examples.counter.action.decrement_number import DecrementNumber
+from examples.counter.action.increment_number import IncrementNumber
 
 
-class CounterState(State):
+class CounterState:
     def __init__(self):
-        self.number: Number = Number(0)
+        self.__number: Observable = Observable(0)
 
-    def dispatch(self, action: Action) -> None:
-        match action.name:
-            case "incrementNumber":
-                self.number.increment(action.payload["amount"])
-            case "decrementNumber":
-                self.number.decrement(action.payload["amount"])
-            case other:
-                raise Exception(f"Unknown action: {other}")
+    @property
+    def number(self):
+        return self.__number
+
+    def incrementNumber(self, amount):
+        self.__number.apply(IncrementNumber(amount))
+
+    def decrementNumber(self, amount):
+        self.__number.apply(DecrementNumber(amount))

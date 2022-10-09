@@ -1,7 +1,11 @@
-from typing import Any
+import abc
 
 
-class Action:
-    def __init__(self, name: str, payload: dict[str, Any]):
-        self.name: str = name
-        self.payload: dict[str, Any] = payload
+class Action(metaclass=abc.ABCMeta):
+    @abc.abstractmethod
+    def __init__(self):
+        pass
+
+    @abc.abstractmethod
+    def __call__(self, *args, **kwargs):
+        pass

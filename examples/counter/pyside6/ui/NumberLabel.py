@@ -3,6 +3,7 @@ from PySide6.QtWidgets import QLabel, QSizePolicy
 
 from core.globalstate import GlobalState
 from core.observer import Observer
+from examples.counter.action.update_number import UpdateNumber
 
 
 class NumberLabel(
@@ -14,10 +15,9 @@ class NumberLabel(
         QLabel.__init__(self, parent=parent)
         self.observe(GlobalState.counter.number)
         self.setText(f"{GlobalState.counter.number.value}")
-        self.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.setAlignment(Qt.AlignCenter)
         self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
 
     def notify_state_changed(self, action):
-        match action.name:
-            case "numberChanged":
-                self.setText(f"{GlobalState.counter.number.value}")
+        if isinstance(action, UpdateNumber):
+            self.setText(f"{GlobalState.counter.number.value}")

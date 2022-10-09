@@ -6,8 +6,6 @@ gi.require_version('Gtk', '3.0')
 
 from gi.repository import Gtk
 
-from core.action import Action
-
 
 class IncrementButton(
     Gtk.Button
@@ -19,12 +17,5 @@ class IncrementButton(
         self.connect(
             'clicked',
             lambda btn:
-            GlobalState.counter.dispatch(
-                Action(
-                    'incrementNumber',
-                    {
-                        "amount": 1
-                    }
-                )
-            )
+            GlobalState.counter.incrementNumber(1)
         )
