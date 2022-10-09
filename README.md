@@ -19,6 +19,10 @@ and have a closer look.
 
 ### Flow
 
+****
+⚠ **All the following is outdated.** ⚠
+****
+
 In GSO, application state is encapsulated in 
 user-defined observables. An observable is like
 a wrapper around the actual state or variable, that
@@ -89,6 +93,10 @@ has all what the object being notified with the action needs
 to make the corresponding update properly.
 
 If you are familiar with class diagrams, this might be useful: 
+
+****
+⚠ **This class diagram is outdated.** ⚠
+****
 
 ![GSO Class Diagram](./gso-class-diagram.svg)
 
