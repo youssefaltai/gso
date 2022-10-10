@@ -31,7 +31,7 @@ All an observable brings to the table is that it keeps references to
 objects (usually UI components) that are interested in knowing when 
 the wrapped state changes.
 
-Observables force observers notification when encapsulated state changes, 
+Observables force notification of observers when encapsulated state changes, 
 so whenever application state changes, UI components can instantly update
 accordingly.
 
