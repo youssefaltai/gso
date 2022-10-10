@@ -51,8 +51,8 @@ so that UI components can easily request state updates
 and observe application state. It acts as a singleton, and stores
 all the observables in a Python `dict`.
 
-As you already know, an observable can have multiple observers.
-Also, an observer can observe multiple observables.
+As you already know, an observable can have multiple observers,
+and an observer can observe multiple observables.
 
 In other words, one variable in application state
 can have multiple UI components depending on it,
