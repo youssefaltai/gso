@@ -48,7 +48,8 @@ state? Well, that's where the **GS** comes to play.
 The `GlobalState` class is used to group all application state variables
 and make them globally available everywhere in your code, 
 so that UI components can easily request state updates
-and observe application state.
+and observe application state. It acts as a singleton, and stores
+all the observables in a Python `dict`.
 
 As you already know, an observable can have multiple observers.
 Also, an observer can observe multiple observables.
@@ -61,16 +62,18 @@ the `notify_state_changed()` method on `Observer`s
 accepts the parameter `action`.
 
 If you are familiar with [Redux](https://redux.js.org/), you probably
-already have an idea what actions are, they are pretty similar in GSO.
+already have an idea what actions are, they are pretty similar in GSO,
+but they are **not** the same.
 
-Anyway, actions are objects that describe what kind of update 
+In both Redux and GSO, actions are objects that describe what kind of update 
 should take place in application state.
 
-In Redux, every action had a unique name, and a payload that
+In Redux, every action has a unique name, and a payload that
 has all what's needed to make the corresponding update properly.
 
 However, in GSO, actions are distinct objects that encapsulate
-state update logic.
+state update logic. They are used by `Observable`s in their `apply()`
+method to update encapsulated state.
 
 If you are familiar with class diagrams, this might be useful: 
 
