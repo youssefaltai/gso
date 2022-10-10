@@ -11,7 +11,7 @@ but it works well with pretty much every class-based UI library out there.
 
 You will find a lot of [examples](https://github.com/youssef-attai/gso/tree/main/examples)
 that can help you get started.
-The examples are very simple, they are focused on 
+The examples are very simple, they are all focused on 
 the pattern that works best with GSO.
 
 You are encouraged to clone the ones that use the UI library you are working with
@@ -23,55 +23,32 @@ and have a closer look.
 ⚠ **All the following is outdated.** ⚠
 ****
 
-In GSO, application state is encapsulated in 
-user-defined observables. An observable is like
-a wrapper around the actual state or variable, that
-helps make application state and UI state synced together.
+In GSO, application state is encapsulated in observables.
 
-All an observable brings to the table is that it keeps references to objects that are
-interested in knowing when the wrapped state changes.
+An observable is like a wrapper around the actual state or variable.
 
-Observables provide **one and only one** way to update encapsulated state, and
-in this way, observers are notified after the update happens so
-that they can update their own state accordingly.
+All an observable brings to the table is that it keeps references to 
+objects (Usually UI components) that are interested in knowing when 
+the wrapped state changes.
+
+Observables force observers notification when encapsulated state changes, 
+so whenever application state changes, UI components can instantly update
+accordingly.
 
 All UI components that depend on at least one variable in
-application state should implement the `Observer` interface.
-Each of these variables should be encapsulated in
-a class that extends the `Observable` class. 
+application state should implement the `Observer` interface,
+and each of these variables should be encapsulated in
+an `Observable`. 
 
-Now UI components are able to observe the observables they
-depend on, using the `observe()` method on `Observer`
-instances (or `attach_observer()` on `Observable` instances),
-and implement the `notify_state_changed()` method to react
-accordingly when an observable state changes.
-
-That was the O in GSO, the Observer pattern.
+That was the **O** in GSO, the _Observer pattern_.
 
 You might be thinking, how do UI components reach
-the observables? Well, that's where the GS comes to play.
+state? Well, that's where the **GS** comes to play.
 
-First, all related observables should be encapsulated together
-in a class that implement the `State` interface.
-
-`State` classes should implement the `dispatch()`
-method, which is what UI components are going to use
-to request an update in state (usually due to
-some kind of UI event). The `dispatch()` method
-should handle changing the observables' states based on the
-dispatched `Action` (more on `Action`s later).
-
-Then, the `GlobalState` class is used to group all `State` classes 
+The `GlobalState` class is used to group all application state variables
 and make them globally available everywhere in your code, 
-so that UI components can easily dispatch actions and request 
-state updates. 
-
-Grouping `State` classes is done using the
-`GlobalState`'s public class method `create()`, which can only
-be called once at the very beginning of your application, to
-initialize and prepare application state.
-
-That was the GS in GSO, the `GlobalState` class.
+so that UI components can easily request state updates
+and observe application state.
 
 As you already know, an observable can have multiple observers.
 Also, an observer can observe multiple observables.
@@ -83,19 +60,22 @@ variables in application state, which is why
 the `notify_state_changed()` method on `Observer`s
 accepts the parameter `action`.
 
-If you are familiar with [Redux](https://redux.js.org/), you already
-know what actions are, they are exactly the same in GSO.
+If you are familiar with [Redux](https://redux.js.org/), you probably
+already have an idea what actions are, they are pretty similar in GSO.
 
 Anyway, actions are objects that describe what kind of update 
-should take place in both UI components and application state.
-Every action should have a unique name, and a payload that
-has all what the object being notified with the action needs
-to make the corresponding update properly.
+should take place in application state.
+
+In Redux, every action had a unique name, and a payload that
+has all what's needed to make the corresponding update properly.
+
+However, in GSO, actions are distinct objects that encapsulate
+state update logic.
 
 If you are familiar with class diagrams, this might be useful: 
 
 ****
-✓ **This class diagram is updated. Documentation will be updated soon.**
+⚠ **This class diagram is outdated.** ⚠
 ****
 
 ![GSO Class Diagram](./gso-class-diagram.svg)
