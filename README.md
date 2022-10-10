@@ -73,15 +73,11 @@ has all what is needed to make the corresponding update properly.
 
 However, in GSO, actions are distinct objects that encapsulate
 state update logic. They are used by `Observable`s in their `apply()`
-method to update encapsulated state.
+method to update encapsulated state using the encapsulated logic.
+
+**If you found any of this confusing or unclear, please refer to the examples.**
 
 If you are familiar with class diagrams, this might be useful: 
-
-****
-⚠ **This class diagram is outdated.** ⚠
-****
-
-![GSO Class Diagram](./gso-class-diagram.svg)
 
 ## How to install
 
