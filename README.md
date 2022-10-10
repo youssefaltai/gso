@@ -95,7 +95,7 @@ to make the corresponding update properly.
 If you are familiar with class diagrams, this might be useful: 
 
 ****
-⚠ **This class diagram is outdated.** ⚠
+✓ **This class diagram is updated. Documentation will be updated soon.**
 ****
 
 ![GSO Class Diagram](./gso-class-diagram.svg)
