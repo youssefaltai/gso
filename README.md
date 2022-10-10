@@ -69,7 +69,7 @@ In both Redux and GSO, actions are objects that describe what kind of update
 should take place in application state.
 
 In Redux, every action has a unique name, and a payload that
-has all what's needed to make the corresponding update properly.
+has all what is needed to make the corresponding update properly.
 
 However, in GSO, actions are distinct objects that encapsulate
 state update logic. They are used by `Observable`s in their `apply()`
