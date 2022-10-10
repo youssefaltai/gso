@@ -77,8 +77,6 @@ method to update encapsulated state using the encapsulated logic.
 
 **If you found any of this confusing or unclear, please refer to the examples.**
 
-If you are familiar with class diagrams, this might be useful: 
-
 ## How to install
 
 Make sure you have `pip` installed, then open a terminal window, and type:
