@@ -12,5 +12,5 @@ class IncrementButton(QPushButton):
         self.setIcon(QIcon("./../icons/list-add-symbolic.svg"))
         self.clicked.connect(
             lambda:
-            GlobalState.counter.incrementNumber(1)
+            GlobalState.get("counter").incrementNumber(1)
         )

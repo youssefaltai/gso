@@ -1,7 +1,6 @@
 import sys
 
 from core.globalstate import GlobalState
-from core.observable import Observable
 from examples.counter.action.decrement_number import DecrementNumber
 from examples.counter.action.increment_number import IncrementNumber
 from examples.counter.custom_ui.customui.base.View import View
@@ -18,12 +17,12 @@ class MainUI(View):
 
         self.inc_button.add_on_click_listener(
             lambda:
-            GlobalState.counter.number.apply(IncrementNumber(1))
+            GlobalState.get("counter").number.apply(IncrementNumber(1))
         )
 
         self.dec_button.add_on_click_listener(
             lambda:
-            GlobalState.counter.number.apply(DecrementNumber(1))
+            GlobalState.get("counter").number.apply(DecrementNumber(1))
         )
 
     def show(self):

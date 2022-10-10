@@ -9,9 +9,9 @@ class NumberLabel(
     Observer
 ):
     def __init__(self):
-        Label.__init__(self, text=f"{GlobalState.counter.number.value}")
-        self.observe(GlobalState.counter.number)
+        Label.__init__(self, text=f'{GlobalState.get("counter").number.value}')
+        self.observe(GlobalState.get("counter").number)
 
     def notify_state_changed(self, action):
         if isinstance(action, UpdateNumber):
-            self.update_text(f"{GlobalState.counter.number.value}")
+            self.update_text(f'{GlobalState.get("counter").number.value}')

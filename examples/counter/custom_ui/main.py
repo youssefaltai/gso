@@ -4,7 +4,7 @@ from ui.MainUI import MainUI
 
 
 def main():
-    GlobalState.create(counter=CounterState())
+    GlobalState.set("counter", CounterState())
 
     main_ui = MainUI()
     main_ui.loop()

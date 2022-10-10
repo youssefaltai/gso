@@ -10,7 +10,7 @@ from gi.repository import Gtk
 
 
 def main():
-    GlobalState.create(counter=CounterState())
+    GlobalState.set('counter', CounterState())
 
     window = MainWindow()
     window.connect('destroy', Gtk.main_quit)

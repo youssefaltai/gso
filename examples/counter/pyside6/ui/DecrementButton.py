@@ -12,5 +12,5 @@ class DecrementButton(QPushButton):
         self.setIcon(QIcon("./../icons/list-remove-symbolic.svg"))
         self.clicked.connect(
             lambda:
-            GlobalState.counter.decrementNumber(1)
+            GlobalState.get("counter").decrementNumber(1)
         )

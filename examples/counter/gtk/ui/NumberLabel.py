@@ -17,9 +17,9 @@ class NumberLabel(
 ):
     def __init__(self):
         Gtk.Label.__init__(self)
-        self.observe(GlobalState.counter.number)
-        self.set_label(f"{GlobalState.counter.number.value}")
+        self.observe(GlobalState.get('counter').number)
+        self.set_label(f"{GlobalState.get('counter').number.value}")
 
     def notify_state_changed(self, action):
         if isinstance(action, UpdateNumber):
-            self.set_label(f"{GlobalState.counter.number.value}")
+            self.set_label(f"{GlobalState.get('counter').number.value}")

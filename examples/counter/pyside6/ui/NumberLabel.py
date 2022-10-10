@@ -13,11 +13,11 @@ class NumberLabel(
 ):
     def __init__(self, parent):
         QLabel.__init__(self, parent=parent)
-        self.observe(GlobalState.counter.number)
-        self.setText(f"{GlobalState.counter.number.value}")
+        self.observe(GlobalState.get("counter").number)
+        self.setText(f'{GlobalState.get("counter").number.value}')
         self.setAlignment(Qt.AlignCenter)
         self.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
 
     def notify_state_changed(self, action):
         if isinstance(action, UpdateNumber):
-            self.setText(f"{GlobalState.counter.number.value}")
+            self.setText(f'{GlobalState.get("counter").number.value}')
