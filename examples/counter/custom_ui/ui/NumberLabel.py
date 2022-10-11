@@ -1,7 +1,7 @@
 from core.globalstate import GlobalState
 from core.observer import Observer
 from examples.counter.action.update_number import UpdateNumber
-from examples.counter.custom_ui.customui.Label import Label
+from examples.customui.Label import Label
 
 
 class NumberLabel(

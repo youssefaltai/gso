@@ -7,5 +7,5 @@ class DecrementNumber(UpdateNumber):
         self.amount = amount
 
     def __call__(self, num):
-        super().__call__()
+        super().__call__(num)
         return num - self.amount
