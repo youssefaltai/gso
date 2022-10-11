@@ -46,5 +46,5 @@ class MainWindow(
     def handle_on_key_pressed_entry(self, widget, eventkey):
         note = widget.get_text()
         if eventkey.keyval == Gdk.KEY_Return:
-            GlobalState.get('notes').handle_user_input(note)
+            GlobalState.get('notes').add_note(note)
             widget.set_text('')
