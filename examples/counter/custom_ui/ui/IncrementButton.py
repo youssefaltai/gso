@@ -1,4 +1,4 @@
-from examples.custom_ui.customui.Button import Button
+from examples.customui.Button import Button
 
 
 class IncrementButton(Button):

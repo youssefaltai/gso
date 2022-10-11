@@ -1,5 +1,5 @@
-from examples.custom_ui.customui.Label import Label
-from examples.custom_ui.customui.base.View import View
+from examples.customui.Label import Label
+from examples.customui.base.View import View
 
 
 class Button(View):

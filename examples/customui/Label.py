@@ -1,4 +1,4 @@
-from examples.custom_ui.customui.base.View import View
+from examples.customui.base.View import View
 
 
 class Label(View):
