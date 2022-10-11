@@ -1,4 +1,4 @@
-from examples.counter.custom_ui.customui.Button import Button
+from examples.custom_ui.customui.Button import Button
 
 
 class DecrementButton(Button):

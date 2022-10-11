@@ -3,10 +3,10 @@ import sys
 from core.globalstate import GlobalState
 from examples.counter.action.decrement_number import DecrementNumber
 from examples.counter.action.increment_number import IncrementNumber
-from examples.counter.custom_ui.customui.base.View import View
-from examples.counter.custom_ui.ui.DecrementButton import DecrementButton
-from examples.counter.custom_ui.ui.IncrementButton import IncrementButton
-from examples.counter.custom_ui.ui.NumberLabel import NumberLabel
+from examples.custom_ui.customui.base.View import View
+from examples.custom_ui.ui.DecrementButton import DecrementButton
+from examples.custom_ui.ui.IncrementButton import IncrementButton
+from examples.custom_ui.ui.NumberLabel import NumberLabel
 
 
 class MainUI(View):
