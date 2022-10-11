@@ -62,7 +62,7 @@ the `notify_state_changed()` method on `Observer`s
 accepts the parameter `action`.
 
 If you are familiar with [Redux](https://redux.js.org/), you probably
-already have an idea what actions are, they are pretty similar in GSO,
+ have an idea what actions are, they are pretty similar in GSO,
 but they are **not** the same.
 
 In both Redux and GSO, actions are objects that describe what kind of update 
