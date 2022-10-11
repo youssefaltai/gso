@@ -5,5 +5,5 @@ class UpdateNumber(Action):
     def __init__(self):
         pass
 
-    def __call__(self):
+    def __call__(self, current_state):
         pass
