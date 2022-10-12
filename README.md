@@ -1,7 +1,7 @@
 # GSO (Global State Observer)
 
 GSO is an open-source Python library for managing application state.
-It uses a modified version of the 
+It uses the 
 [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern) 
 to sync UI state with application state.
 
