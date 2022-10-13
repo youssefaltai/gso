@@ -7,5 +7,5 @@ class Action(metaclass=abc.ABCMeta):
         pass
 
     @abc.abstractmethod
-    def __call__(self, current_state):
+    def __call__(self, current):
         pass
