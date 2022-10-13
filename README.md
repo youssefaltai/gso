@@ -6,8 +6,7 @@ It uses the
 to sync UI state with application state.
 
 GSO was originally designed to work with 
-[PySide](https://wiki.qt.io/Qt_for_Python)/
-[PyQt](https://riverbankcomputing.com/software/pyqt/),
+[PySide](https://wiki.qt.io/Qt_for_Python)/[PyQt](https://riverbankcomputing.com/software/pyqt/),
 but it works well with pretty much every class-based UI library out there.
 
 ## How to use
