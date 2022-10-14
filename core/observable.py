@@ -2,8 +2,8 @@ import abc
 
 
 class Observable(metaclass=abc.ABCMeta):
-    def __init__(self, initial_value):
-        self.__value = initial_value
+    def __init__(self, value):
+        self.__value = value
         self.__observers = []
 
     @property
