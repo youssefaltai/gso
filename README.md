@@ -11,7 +11,7 @@ but it works well with pretty much every class-based UI library out there.
 
 ## How to use
 
-You will find a lot of 
+You will find some
 [examples](https://github.com/youssef-attai/gso/tree/main/examples)
 that can help you get started.
 The examples are very simple, they are focused on 
