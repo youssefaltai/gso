@@ -24,9 +24,7 @@ and have a closer look.
 
 In GSO, application state is encapsulated in observables.
 
-An observable is like a wrapper around the actual state or variable.
-
-All an observable brings to the table is that it keeps references to 
+An observable is like a wrapper around the actual state or variable, all it brings to the table is that it keeps references to 
 objects (usually UI components) that are interested in knowing when 
 the wrapped state changes.
 
