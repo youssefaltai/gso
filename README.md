@@ -14,7 +14,7 @@ but it works well with pretty much every class-based UI library out there.
 You will find some
 [examples](https://github.com/youssef-attai/gso/tree/main/examples)
 that can help you get started.
-The examples are very simple, they are focused on 
+The examples are simple, they are focused on 
 the pattern that works best with GSO.
 
 You are encouraged to clone the ones that use the UI library you are working with
