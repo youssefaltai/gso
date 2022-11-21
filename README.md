@@ -76,7 +76,7 @@ method to update encapsulated state using the encapsulated logic.
 
 ## How to install
 
-Make sure you have `pip` installed, then open a terminal window, and type:
+Make sure you have `pip` installed, then open a terminal window, and type in:
 ```
 pip install gso
 ```
